@@ -1,0 +1,433 @@
+<!DOCTYPE html>//AI 辅助生成：DeepSeek-V3-0324，2026 -4-18 
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover, maximum-scale=1.0">
+    <title>✨ 文丘里效应 · 清新乐园 ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #b0e8c8; font-family: 'Quicksand', 'Comic Sans MS', cursive, sans-serif; padding: 0; overflow: hidden; }
+        #cute-park-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+        .cute-park { position: relative; width: 100%; height: 100%; background: linear-gradient(170deg, #fffdf0 0%, #f0ffff 25%, #e0fcff 50%, #fff8e8 75%, #fff0e0 100%); overflow: hidden; }
+        .cute-park > div, .cute-park > svg { position: absolute; }
+        
+        /* 云朵动画 — 幅度加大！ */
+        .cloud { 
+            background: #ffffff; border-radius: 200px; 
+            box-shadow: 0 20px 35px -5px rgba(255,250,210,0.9), 0 0 40px 15px rgba(255,255,240,0.6);
+            animation: cloudDrift 18s ease-in-out infinite alternate, cloudFloat 4s ease-in-out infinite;
+        }
+        .cloud::before, .cloud::after { content: ''; position: absolute; background: inherit; border-radius: inherit; box-shadow: inherit; }
+        .c1 { width: 280px; height: 100px; top: 3%; left: 1%; animation-duration: 22s, 5s; }
+        .c1::before { width: 150px; height: 150px; top: -75px; left: 20px; }
+        .c1::after { width: 180px; height: 130px; top: -60px; left: 100px; }
+        .c2 { width: 240px; height: 85px; top: 15%; right: 2%; animation-duration: 25s, 4.5s; }
+        .c2::before { width: 130px; height: 130px; top: -65px; left: 12px; }
+        .c2::after { width: 150px; height: 110px; top: -50px; left: 85px; }
+        .c3 { width: 200px; height: 75px; top: 40%; left: 10%; animation-duration: 20s, 5.5s; }
+        .c3::before { width: 110px; height: 110px; top: -55px; left: 12px; }
+        .c3::after { width: 130px; height: 90px; top: -40px; left: 70px; }
+        .c4 { width: 180px; height: 70px; top: 30%; right: 15%; animation-duration: 28s, 4s; }
+        .c4::before { width: 95px; height: 95px; top: -48px; left: 10px; }
+        .c4::after { width: 115px; height: 80px; top: -35px; left: 65px; }
+        .c5 { width: 220px; height: 80px; top: 55%; left: 30%; animation-duration: 30s, 6s; }
+        .c5::before { width: 120px; height: 120px; top: -60px; left: 15px; }
+        .c5::after { width: 140px; height: 100px; top: -45px; left: 80px; }
+
+        /* 云左右飘移幅度加大：150px → 300px */
+        @keyframes cloudDrift { 0% { transform: translateX(0px); } 100% { transform: translateX(300px); } }
+        /* 云上下浮动幅度加大：-15px → -28px */
+        @keyframes cloudFloat { 0% { transform: translateY(0px); } 50% { transform: translateY(-28px); } 100% { transform: translateY(0px); } }
+        
+        /* 太阳 */
+        .sun { width: 180px; height: 180px; top: 2%; right: 3%; filter: drop-shadow(0 0 120px rgba(255,255,210,1)) drop-shadow(0 0 60px #fffde0); z-index: 6; animation: sunRotate 20s linear infinite, sunPulse 3.5s ease-in-out infinite alternate; }
+        .sun-body { width: 100%; height: 100%; background: radial-gradient(circle at 30% 30%, #ffffff, #ffee90); border-radius: 50%; box-shadow: inset -6px -6px 0 #f0c040, 0 0 0 30px rgba(255,255,250,0.98), 0 0 80px 20px #ffffd0; display: flex; align-items: center; justify-content: center; }
+        .sun-face { position: relative; width: 85px; height: 85px; }
+        .sun-eye { position: absolute; width: 18px; height: 26px; background: #6f4e2e; border-radius: 50%; top: 22px; }
+        .eye-l { left: 8px; } .eye-r { right: 8px; }
+        .sun-blush { position: absolute; width: 28px; height: 14px; background: #ffb880; border-radius: 50%; opacity: 0.95; top: 45px; }
+        .blush-l { left: 0; } .blush-r { right: 0; }
+        .sun-mouth { position: absolute; width: 40px; height: 22px; border-bottom: 8px solid #d89040; border-radius: 0 0 40% 40%; bottom: 20px; left: 50%; transform: translateX(-50%); }
+        @keyframes sunRotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        /* 太阳缩放脉冲幅度加大：1.05 → 1.15 */
+        @keyframes sunPulse { 0% { transform: scale(1); } 100% { transform: scale(1.15); } }
+
+        /* 草地 */
+        .grass { bottom: 0; left: 0; width: 100%; height: 38%; background: linear-gradient(0deg, #a8f080 0%, #c8ffb0 50%, #e8ffd0 100%); border-radius: 70px 70px 0 0; box-shadow: inset 0 12px 30px rgba(80,180,40,0.1); z-index: 15; }
+        .grass::before { content: ''; position: absolute; bottom: 100%; left: 0; width: 100%; height: 60px; background: radial-gradient(circle at 15% 100%, #f0ffe0 16px, transparent 17px), radial-gradient(circle at 45% 100%, #e0ffc0 18px, transparent 19px), radial-gradient(circle at 75% 100%, #f8fff0 14px, transparent 15px); background-size: 70px 40px, 80px 45px, 60px 36px; background-repeat: repeat-x; }
+
+        /* 蒲公英等 */
+        .dandelion { position: absolute; width: 40px; height: 40px; filter: drop-shadow(0 0 8px rgba(255,255,240,0.9)); animation: dandelionFloat 12s infinite ease-in-out; z-index: 20; }
+        .d1 { top: 70%; left: 15%; } .d2 { top: 45%; left: 75%; width: 35px; height: 35px; animation-delay: -4s; }
+        .d3 { top: 80%; left: 55%; width: 30px; height: 30px; animation-delay: -8s; }
+        .dandelion .seed { position: absolute; width: 2px; height: 18px; background: #f0f0e0; top: 8px; left: 19px; transform-origin: bottom center; }
+        .dandelion .seed::after { content: ''; position: absolute; top: -8px; left: -6px; width: 14px; height: 14px; background: radial-gradient(circle, #fff 20%, #f8f8e0 80%); border-radius: 50%; opacity: 0.8; }
+        .dandelion .seed:nth-child(1) { transform: rotate(0deg) translateY(-5px); }
+        .dandelion .seed:nth-child(2) { transform: rotate(30deg) translateY(-5px); }
+        .dandelion .seed:nth-child(3) { transform: rotate(60deg) translateY(-5px); }
+        .dandelion .seed:nth-child(4) { transform: rotate(90deg) translateY(-5px); }
+        .dandelion .seed:nth-child(5) { transform: rotate(120deg) translateY(-5px); }
+        .dandelion .seed:nth-child(6) { transform: rotate(150deg) translateY(-5px); }
+        .dandelion .seed:nth-child(7) { transform: rotate(180deg) translateY(-5px); }
+        .dandelion .seed:nth-child(8) { transform: rotate(210deg) translateY(-5px); }
+        .dandelion .seed:nth-child(9) { transform: rotate(240deg) translateY(-5px); }
+        .dandelion .seed:nth-child(10) { transform: rotate(270deg) translateY(-5px); }
+        .dandelion .seed:nth-child(11) { transform: rotate(300deg) translateY(-5px); }
+        .dandelion .seed:nth-child(12) { transform: rotate(330deg) translateY(-5px); }
+        @keyframes dandelionFloat { 0% { transform: translate(0,0) rotate(0deg); opacity: 0.9; } 50% { transform: translate(30px,-40px) rotate(15deg); opacity: 1; } 100% { transform: translate(-10px,-80px) rotate(-10deg); opacity: 0.7; } }
+
+        /* 热气球 — 上下幅度加大！ */
+        .tiny-hotair { position: absolute; width: 35px; height: 55px; animation: hotairFloat 8s infinite ease-in-out; z-index: 18; }
+        .hot1 { top: 50%; left: 20%; } .hot2 { top: 30%; left: 65%; width: 28px; height: 45px; animation-delay: -3s; }
+        .hot3 { top: 65%; left: 85%; width: 32px; height: 50px; animation-delay: -6s; }
+        .hotair-envelope { width: 100%; height: 70%; background: radial-gradient(circle at 30% 30%, #ffb8d0, #ff80a0); border-radius: 50% 50% 40% 40%; box-shadow: inset -5px -5px 0 rgba(0,0,0,0.05); }
+        .hotair-basket { width: 12px; height: 10px; background: #c0a060; margin: -2px auto 0; border-radius: 0 0 4px 4px; }
+        .hot2 .hotair-envelope { background: radial-gradient(circle at 30% 30%, #b0e0ff, #60b0ff); }
+        .hot3 .hotair-envelope { background: radial-gradient(circle at 30% 30%, #ffe8a0, #ffd040); }
+        /* 热气球上下移动：-20px → -38px */
+        @keyframes hotairFloat { 0% { transform: translateY(0px); } 50% { transform: translateY(-38px); } 100% { transform: translateY(0px); } }
+
+        .star { width: 30px; height: 30px; background: #fffff8; clip-path: polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%); box-shadow: 0 0 30px #ffffd0; animation: twinkle 2.2s infinite alternate; }
+        .s1 { top: 8%; left: 18%; width: 22px; height: 22px; } .s2 { top: 22%; left: 45%; width: 18px; height: 18px; animation-delay: 0.7s; }
+        .s3 { top: 12%; left: 72%; width: 25px; height: 25px; animation-delay: 1.4s; } .s4 { top: 35%; left: 85%; width: 20px; height: 20px; animation-delay: 0.3s; }
+        @keyframes twinkle { 0% { opacity: 0.6; transform: scale(0.9); } 100% { opacity: 1; transform: scale(1.3); } }
+
+        .rainbow { width: 480px; height: 240px; top: 5%; left: 0%; opacity: 1; z-index: 5; filter: drop-shadow(0 8px 12px rgba(0,0,0,0.03)); }
+        .butterfly, .bunny, .lollipop, .ladybug, .flag, .house, .tree, .ferris-wheel, .flower { filter: brightness(1.15); }
+
+        #canvas-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; pointer-events: auto; }
+        #info { position: absolute; top: 20px; left: 20px; color: #2a1a0a; text-shadow: 3px 3px 0 #ffeebb; font-size: clamp(1rem,4vw,1.4rem); font-weight: 700; background: rgba(255,255,240,0.98); padding: 12px 28px; border-radius: 60px; border: 3px solid #88cc44; box-shadow: 0 6px 0 #558822; z-index: 100; }
+        #coord-debug { position: absolute; top: 85px; left: 20px; color: #2a1a0a; background: rgba(255,255,255,0.95); padding: 6px 18px; border-radius: 24px; font-size: 0.85rem; border: 1px solid #88cc44; z-index: 100; }
+        #controls-note { position: absolute; bottom: 20px; left: 20px; color: #2a1a0a; background: rgba(255,255,240,0.98); padding: 12px 24px; border-radius: 40px; font-size: 0.95rem; border-left: 8px solid #88cc44; box-shadow: 0 4px 12px rgba(0,0,0,0.1); z-index: 100; }
+        #movement-tip { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); color: #2a1a0a; background: rgba(255,255,240,0.98); padding: 10px 28px; border-radius: 40px; font-size: 1rem; border: 2px solid #88cc44; box-shadow: 0 3px 0 #558822; z-index: 100; }
+        .bubble { background: #FFFcf5; border: 4px solid #FF7700; border-radius: 30px 30px 30px 8px; padding: 16px 28px; max-width: min(360px,80vw); box-shadow: 10px 10px 0 #BB5500; font-size: clamp(0.95rem,4vw,1.25rem); font-weight: 600; color: #2a1500; opacity: 0; transform: scale(0.2) translateY(20px); transition: all 0.35s cubic-bezier(0.34,1.56,0.64,1); pointer-events: none; backdrop-filter: blur(6px); text-align: center; line-height: 1.45; z-index: 40; }
+        .bubble.student { background: #F0F8FF; border-color: #2299DD; border-radius: 30px 30px 8px 30px; box-shadow: 10px 10px 0 #1166AA; color: #0a2a4a; }
+        .bubble-tail { position: absolute; bottom: -18px; left: 28px; width: 0; height: 0; border-left: 16px solid transparent; border-right: 16px solid transparent; border-top: 18px solid #FF7700; }
+        .bubble.student .bubble-tail { left: auto; right: 28px; border-top-color: #2299DD; }
+        .bubble.show { opacity: 1; transform: scale(1) translateY(0); }
+        #fullscreen-btn { position: absolute; top: 20px; right: 20px; background: rgba(255,255,240,0.98); border: 2px solid #88cc44; border-radius: 30px; padding: 8px 20px; font-size: 1rem; font-weight: bold; cursor: pointer; box-shadow: 0 3px 0 #558822; z-index: 101; }
+        #fullscreen-btn:hover { background: #f0ffd8; transform: translateY(-2px); box-shadow: 0 5px 0 #558822; }
+        #loading-screen { position: absolute; inset: 0; background: #c0f0d8; z-index: 200; display: flex; flex-direction: column; justify-content: center; align-items: center; transition: opacity 1s; pointer-events: none; }
+        #loading-text { color: #2a1a0a; font-size: 2.2rem; text-shadow: 3px 3px 0 #ffeebb; margin-top: 20px; }
+        #loading-bar { width: 320px; height: 10px; background: rgba(255,255,255,0.9); border-radius: 6px; margin-top: 35px; border: 2px solid #88cc44; overflow: hidden; }
+        #loading-progress { width: 0%; height: 100%; background: #88cc44; border-radius: 4px; }
+        @media (max-width: 600px) { #fullscreen-btn { right: 130px; } }
+    </style>
+    <script type="importmap">
+        {"imports":{"three":"https://unpkg.com/three@0.128.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.128.0/examples/jsm/"}}
+    </script>
+</head>
+<body>
+    <div id="cute-park-bg">
+        <div class="cute-park">
+            <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div><div class="cloud c4"></div><div class="cloud c5"></div>
+            <div class="star s1"></div><div class="star s2"></div><div class="star s3"></div><div class="star s4"></div>
+            <div class="sun"><div class="sun-body"><div class="sun-face"><div class="sun-eye eye-l"></div><div class="sun-eye eye-r"></div><div class="sun-blush blush-l"></div><div class="sun-blush blush-r"></div><div class="sun-mouth"></div></div></div></div>
+            <svg class="rainbow" viewBox="0 0 360 180">
+                <circle cx="180" cy="180" r="150" stroke="#FFEAF8" stroke-width="16" fill="none"/>
+                <circle cx="180" cy="180" r="132" stroke="#FFF6E0" stroke-width="16" fill="none"/>
+                <circle cx="180" cy="180" r="114" stroke="#FFFFE8" stroke-width="16" fill="none"/>
+                <circle cx="180" cy="180" r="96" stroke="#E8FFF0" stroke-width="16" fill="none"/>
+                <circle cx="180" cy="180" r="78" stroke="#E8F8FF" stroke-width="16" fill="none"/>
+                <circle cx="180" cy="180" r="60" stroke="#FCE8FF" stroke-width="15" fill="none"/>
+            </svg>
+            <div class="dandelion d1"><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div></div>
+            <div class="dandelion d2"><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div></div>
+            <div class="dandelion d3"><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div><div class="seed"></div></div>
+            <div class="tiny-hotair hot1"><div class="hotair-envelope"></div><div class="hotair-basket"></div></div>
+            <div class="tiny-hotair hot2"><div class="hotair-envelope"></div><div class="hotair-basket"></div></div>
+            <div class="tiny-hotair hot3"><div class="hotair-envelope"></div><div class="hotair-basket"></div></div>
+            <div class="grass"></div>
+            <div class="butterfly"><div class="wing wing-l"></div><div class="wing wing-r"></div></div>
+            <div class="bunny"><div class="bunny-ear ear-l"></div><div class="bunny-ear ear-r"></div><div class="bunny-head"></div><div class="bunny-body"></div><div class="bunny-eye eye-l"></div><div class="bunny-eye eye-r"></div></div>
+            <div class="lollipop"><div class="stick"></div><div class="candy"></div></div>
+            <div class="flag"><div class="pole"></div><div class="flag-cloth"></div></div>
+            <div class="ladybug"></div><div class="ladybug-dots"></div>
+            <div class="house"><div class="house-roof"></div><div class="house-body"><div class="house-door"></div><div class="house-window"></div><div class="house-window house-window2"></div></div></div>
+            <div class="tree"><div class="trunk"></div><div class="leaf leaf1"></div><div class="leaf leaf2"></div><div class="leaf leaf3"></div></div>
+            <div class="tree tree2" style="left:72%;"><div class="trunk"></div><div class="leaf leaf1"></div><div class="leaf leaf2"></div><div class="leaf leaf3"></div></div>
+            <div class="ferris-wheel"><div class="wheel-base"></div><div class="wheel-stand"></div><div class="wheel-circle"><div class="cabin cabin1"></div><div class="cabin cabin2"></div><div class="cabin cabin3"></div><div class="cabin cabin4"></div></div></div>
+            <div class="flower fl1"><div class="stem"></div><div class="flower-head"><div class="petal p1"></div><div class="petal p2"></div><div class="petal p3"></div><div class="petal p4"></div><div class="petal p5"></div><div class="f-center"></div></div></div>
+            <div class="flower fl2"><div class="stem"></div><div class="flower-head"><div class="petal p1"></div><div class="petal p2"></div><div class="petal p3"></div><div class="petal p4"></div><div class="petal p5"></div><div class="f-center"></div></div></div>
+            <div class="flower fl3"><div class="stem"></div><div class="flower-head"><div class="petal p1"></div><div class="petal p2"></div><div class="petal p3"></div><div class="petal p4"></div><div class="petal p5"></div><div class="f-center"></div></div></div>
+        </div>
+    </div>
+
+    <div id="canvas-container"></div>
+
+    <div id="info">✨ 文丘里效应 · 狐狸先生&兔子小姐✨</div>
+    <div id="coord-debug">🐾 狐狸先生(0.5, 2.2) 兔子小姐（3.5, 2.2)</div>
+    <div id="controls-note">🎮 </div>
+    <div id="movement-tip">🐾  文丘里效应 .文丘里密码🐾</div>
+    <div id="loading-screen">
+        <div style="width:90px;height:90px;border:8px solid rgba(136,204,68,0.3);border-top-color:#88cc44;border-radius:50%;animation:spin 1s linear infinite;"></div>
+        <div id="loading-text">✨ 清新乐园加载中 ✨</div>
+        <div id="loading-bar"><div id="loading-progress"></div></div>
+    </div>
+    <button id="fullscreen-btn" title="全屏沉浸体验">🖥️ 全屏</button>
+
+    <script type="module">
+        import * as THREE from 'three';
+        import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
+        import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+        import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+        import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+        import { SMAAPass } from 'three/addons/postprocessing/SMAAPass.js';
+
+        const fullscreenBtn = document.getElementById('fullscreen-btn');
+        fullscreenBtn.addEventListener('click', () => {
+            if (!document.fullscreenElement) { document.documentElement.requestFullscreen(); fullscreenBtn.textContent = '✖️ 退出全屏'; }
+            else { document.exitFullscreen(); fullscreenBtn.textContent = '🖥️ 全屏'; }
+        });
+        document.addEventListener('fullscreenchange', () => { fullscreenBtn.textContent = document.fullscreenElement ? '✖️ 退出全屏' : '🖥️ 全屏'; });
+
+        const progressBar = document.getElementById('loading-progress');
+        const loadingScreen = document.getElementById('loading-screen');
+        const loadingText = document.getElementById('loading-text');
+        function setLoading(p, text) { progressBar.style.width = Math.min(p,100)+'%'; if(text) loadingText.textContent=text; if(p>=100){ setTimeout(()=>loadingScreen.style.opacity='0',400); setTimeout(()=>loadingScreen.style.display='none',1200); } }
+
+        const scene = new THREE.Scene();
+        scene.background = null;
+        const camera = new THREE.PerspectiveCamera(45, innerWidth/innerHeight, 0.1, 1000);
+        camera.position.set(2, 3.5, 12); camera.lookAt(2, 1.5, 0);
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setSize(innerWidth, innerHeight); renderer.setPixelRatio(Math.min(devicePixelRatio,2)); renderer.setClearColor(0x000000, 0);
+        document.getElementById('canvas-container').appendChild(renderer.domElement);
+        const cssRenderer = new CSS2DRenderer();
+        cssRenderer.setSize(innerWidth, innerHeight);
+        cssRenderer.domElement.style.position = 'absolute'; cssRenderer.domElement.style.top = '0'; cssRenderer.domElement.style.left = '0';
+        cssRenderer.domElement.style.pointerEvents = 'none'; cssRenderer.domElement.style.zIndex = '30';
+        document.getElementById('canvas-container').appendChild(cssRenderer.domElement);
+
+        const composer = new EffectComposer(renderer);
+        composer.addPass(new RenderPass(scene, camera));
+        const bloomPass = new UnrealBloomPass(new THREE.Vector2(innerWidth, innerHeight), 0.6, 0.1, 0.3);
+        bloomPass.threshold = 0.0; bloomPass.strength = 0.08; bloomPass.radius = 0.6;
+        composer.addPass(bloomPass);
+        composer.addPass(new SMAAPass(innerWidth*renderer.getPixelRatio(), innerHeight*renderer.getPixelRatio()));
+
+        scene.add(new THREE.AmbientLight(0xffffff, 2.2));
+        const sunLight = new THREE.DirectionalLight(0xfffce8, 3.0); sunLight.position.set(2, 12, 5); scene.add(sunLight);
+        const fillLight = new THREE.DirectionalLight(0xf0faff, 2.0); fillLight.position.set(-3, 5, 6); scene.add(fillLight);
+        const backLight = new THREE.DirectionalLight(0xfffae0, 1.5); backLight.position.set(0, 4, -5); scene.add(backLight);
+        const pointLight1 = new THREE.PointLight(0xfff5d0, 1.2); pointLight1.position.set(1, 3, 4); scene.add(pointLight1);
+        const pointLight2 = new THREE.PointLight(0xfff5d0, 1.0); pointLight2.position.set(4, 3, 3); scene.add(pointLight2);
+
+        const groundPlane = new THREE.Mesh(new THREE.PlaneGeometry(12, 8), new THREE.MeshStandardMaterial({ color: 0xe0ffc8, transparent: true, opacity: 0.05 }));
+        groundPlane.rotation.x = -Math.PI / 2; groundPlane.position.y = 0.01; groundPlane.position.z = 2.5; scene.add(groundPlane);
+
+        function resetShadow(ctx) { ctx.shadowBlur = 0; ctx.shadowColor = 'transparent'; ctx.shadowOffsetY = 0; }
+        function createNickFrame(legState) {
+            const w = 400, h = 520; const canvas = document.createElement('canvas'); canvas.width = w; canvas.height = h; const ctx = canvas.getContext('2d');
+            ctx.shadowColor = 'rgba(0,0,0,0.06)'; ctx.shadowBlur = 6; ctx.shadowOffsetY = 3;
+            ctx.beginPath(); ctx.ellipse(140, 110, 28, 60, -0.12, 0, Math.PI * 2); ctx.fillStyle = '#e89040'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(140, 110, 16, 42, -0.12, 0, Math.PI * 2); ctx.fillStyle = '#f8d8b0'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(130, 72, 10, 20, -0.12, 0, Math.PI * 2); ctx.fillStyle = '#5a3a2a'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(260, 110, 28, 60, 0.12, 0, Math.PI * 2); ctx.fillStyle = '#e89040'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(260, 110, 16, 42, 0.12, 0, Math.PI * 2); ctx.fillStyle = '#f8d8b0'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(270, 72, 10, 20, 0.12, 0, Math.PI * 2); ctx.fillStyle = '#5a3a2a'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(200, 190, 88, 100, 0, 0, Math.PI * 2); ctx.fillStyle = '#f0a050'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(200, 230, 58, 70, 0, 0, Math.PI * 2); ctx.fillStyle = '#f8e8d0'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(200, 165, 42, 38, 0, 0, Math.PI * 2); ctx.fillStyle = '#e89040'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(174, 145, 12, 6, -0.2, 0, Math.PI * 2); ctx.fillStyle = '#5a3a2a'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(226, 145, 12, 6, 0.2, 0, Math.PI * 2); ctx.fillStyle = '#5a3a2a'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(172, 175, 18, 22, 0, 0, Math.PI * 2); ctx.fillStyle = '#fff'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(172, 175, 14, 18, 0, 0, Math.PI * 2); ctx.fillStyle = '#50c080'; ctx.fill();
+            ctx.beginPath(); ctx.arc(170, 171, 8, 0, Math.PI * 2); ctx.fillStyle = '#2a2a2a'; ctx.fill();
+            ctx.beginPath(); ctx.arc(166, 166, 3.5, 0, Math.PI * 2); ctx.fillStyle = '#fff'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(228, 175, 18, 22, 0, 0, Math.PI * 2); ctx.fillStyle = '#fff'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(228, 175, 14, 18, 0, 0, Math.PI * 2); ctx.fillStyle = '#50c080'; ctx.fill();
+            ctx.beginPath(); ctx.arc(226, 171, 8, 0, Math.PI * 2); ctx.fillStyle = '#2a2a2a'; ctx.fill();
+            ctx.beginPath(); ctx.arc(222, 166, 3.5, 0, Math.PI * 2); ctx.fillStyle = '#fff'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(200, 212, 14, 10, 0, 0, Math.PI * 2); ctx.fillStyle = '#2a1a0a'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(197, 209, 4, 3, 0, 0, Math.PI * 2); ctx.fillStyle = '#666'; ctx.fill();
+            ctx.beginPath(); ctx.moveTo(188, 230); ctx.quadraticCurveTo(200, 246, 212, 230); ctx.strokeStyle = '#5a3a2a'; ctx.lineWidth = 3; ctx.stroke();
+            ctx.beginPath(); ctx.moveTo(186, 229); ctx.quadraticCurveTo(176, 224, 174, 216); ctx.stroke();
+            ctx.beginPath(); ctx.moveTo(214, 229); ctx.quadraticCurveTo(224, 224, 226, 216); ctx.stroke();
+            ctx.beginPath(); ctx.moveTo(160, 218); ctx.lineTo(130, 212); ctx.moveTo(162, 226); ctx.lineTo(128, 228); ctx.moveTo(240, 218); ctx.lineTo(270, 212); ctx.moveTo(238, 226); ctx.lineTo(272, 228); ctx.strokeStyle = '#a08060'; ctx.lineWidth = 2; ctx.stroke();
+            ctx.fillStyle = '#e08030'; ctx.fillRect(170, 265, 60, 40);
+            ctx.fillStyle = '#b0d860'; ctx.fillRect(120, 290, 160, 130);
+            ctx.fillStyle = '#a0c850'; ctx.beginPath(); ctx.moveTo(170, 290); ctx.lineTo(200, 320); ctx.lineTo(230, 290); ctx.fill();
+            ctx.fillStyle = '#305080'; ctx.fillRect(190, 295, 20, 70);
+            ctx.fillStyle = '#d05050'; ctx.fillRect(190, 300, 20, 8); ctx.fillRect(190, 320, 20, 8); ctx.fillRect(190, 340, 20, 8);
+            ctx.fillStyle = '#284870'; ctx.beginPath(); ctx.ellipse(200, 298, 14, 10, 0, 0, Math.PI * 2); ctx.fill();
+            ctx.fillStyle = '#e89040'; ctx.beginPath(); ctx.ellipse(125, 340, 18, 45, 0.1, 0, Math.PI * 2); ctx.fill();
+            ctx.beginPath(); ctx.ellipse(275, 340, 18, 45, -0.1, 0, Math.PI * 2); ctx.fill();
+            ctx.fillStyle = '#f8e8d0'; ctx.beginPath(); ctx.ellipse(118, 380, 16, 12, 0, 0, Math.PI * 2); ctx.fill();
+            ctx.beginPath(); ctx.ellipse(282, 380, 16, 12, 0, 0, Math.PI * 2); ctx.fill();
+            ctx.fillStyle = '#c0a870';
+            if (legState === 0) { ctx.fillRect(135, 410, 130, 70); ctx.fillStyle = '#a05030'; ctx.beginPath(); ctx.ellipse(155, 470, 14, 8, 0, 0, Math.PI*2); ctx.fill(); ctx.beginPath(); ctx.ellipse(245, 470, 14, 8, 0, 0, Math.PI*2); ctx.fill(); }
+            else if (legState === 1) { ctx.fillRect(135, 410, 130, 70); ctx.fillStyle = '#a05030'; ctx.beginPath(); ctx.ellipse(145, 480, 14, 8, 0.2, 0, Math.PI*2); ctx.fill(); ctx.beginPath(); ctx.ellipse(255, 460, 14, 8, -0.1, 0, Math.PI*2); ctx.fill(); }
+            else { ctx.fillRect(135, 410, 130, 70); ctx.fillStyle = '#a05030'; ctx.beginPath(); ctx.ellipse(165, 460, 14, 8, -0.1, 0, Math.PI*2); ctx.fill(); ctx.beginPath(); ctx.ellipse(235, 480, 14, 8, 0.2, 0, Math.PI*2); ctx.fill(); }
+            ctx.beginPath(); ctx.ellipse(310, 420, 35, 50, 0.2, 0, Math.PI*2); ctx.fillStyle = '#e89040'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(330, 400, 18, 30, 0.2, 0, Math.PI*2); ctx.fillStyle = '#f8e8d0'; ctx.fill();
+            resetShadow(ctx); return new THREE.CanvasTexture(canvas);
+        }
+        function createJudyFrame(legState) {
+            const w = 400, h = 520; const canvas = document.createElement('canvas'); canvas.width = w; canvas.height = h; const ctx = canvas.getContext('2d');
+            ctx.shadowColor = 'rgba(0,0,0,0.06)'; ctx.shadowBlur = 6; ctx.shadowOffsetY = 3;
+            ctx.beginPath(); ctx.ellipse(145, 70, 24, 90, -0.1, 0, Math.PI * 2); ctx.fillStyle = '#b8b0a8'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(145, 70, 14, 70, -0.1, 0, Math.PI * 2); ctx.fillStyle = '#f0c8d0'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(255, 70, 24, 90, 0.1, 0, Math.PI * 2); ctx.fillStyle = '#b8b0a8'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(255, 70, 14, 70, 0.1, 0, Math.PI * 2); ctx.fillStyle = '#f0c8d0'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(200, 180, 85, 90, 0, 0, Math.PI * 2); ctx.fillStyle = '#c8c0b8'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(155, 200, 20, 14, 0, 0, Math.PI * 2); ctx.fillStyle = '#f8c8d8'; ctx.globalAlpha = 0.5; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(245, 200, 20, 14, 0, 0, Math.PI * 2); ctx.fill(); ctx.globalAlpha = 1.0;
+            ctx.beginPath(); ctx.ellipse(200, 215, 50, 45, 0, 0, Math.PI * 2); ctx.fillStyle = '#f8f0e8'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(168, 170, 20, 24, 0, 0, Math.PI * 2); ctx.fillStyle = '#fff'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(168, 170, 16, 20, 0, 0, Math.PI * 2); ctx.fillStyle = '#a080e0'; ctx.fill();
+            ctx.beginPath(); ctx.arc(166, 165, 9, 0, Math.PI * 2); ctx.fillStyle = '#2a2a3a'; ctx.fill();
+            ctx.beginPath(); ctx.arc(162, 160, 4, 0, Math.PI * 2); ctx.fillStyle = '#fff'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(232, 170, 20, 24, 0, 0, Math.PI * 2); ctx.fillStyle = '#fff'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(232, 170, 16, 20, 0, 0, Math.PI * 2); ctx.fillStyle = '#a080e0'; ctx.fill();
+            ctx.beginPath(); ctx.arc(234, 165, 9, 0, Math.PI * 2); ctx.fillStyle = '#2a2a3a'; ctx.fill();
+            ctx.beginPath(); ctx.arc(238, 160, 4, 0, Math.PI * 2); ctx.fillStyle = '#fff'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(200, 205, 12, 8, 0, 0, Math.PI * 2); ctx.fillStyle = '#f0a0b0'; ctx.fill();
+            ctx.beginPath(); ctx.ellipse(197, 202, 3, 2.5, 0, 0, Math.PI * 2); ctx.fillStyle = '#e07080'; ctx.fill();
+            ctx.beginPath(); ctx.moveTo(190, 220); ctx.quadraticCurveTo(200, 236, 210, 220); ctx.strokeStyle = '#7a6a5a'; ctx.lineWidth = 3; ctx.stroke();
+            ctx.fillStyle = '#f8f0e8'; ctx.fillRect(193, 220, 6, 9); ctx.fillRect(201, 220, 6, 9);
+            ctx.beginPath(); ctx.moveTo(162, 210); ctx.lineTo(128, 202); ctx.moveTo(160, 220); ctx.lineTo(126, 222); ctx.moveTo(238, 210); ctx.lineTo(272, 202); ctx.moveTo(240, 220); ctx.lineTo(274, 222); ctx.strokeStyle = '#a09080'; ctx.lineWidth = 2; ctx.stroke();
+            ctx.fillStyle = '#4880b0'; ctx.fillRect(140, 270, 120, 150);
+            ctx.fillStyle = '#3870a0'; ctx.beginPath(); ctx.moveTo(170, 270); ctx.lineTo(200, 300); ctx.lineTo(230, 270); ctx.fill();
+            ctx.beginPath(); ctx.arc(200, 295, 16, 0, Math.PI * 2); ctx.fillStyle = '#f0c060'; ctx.fill();
+            ctx.beginPath(); ctx.arc(200, 295, 12, 0, Math.PI * 2); ctx.fillStyle = '#f8e090'; ctx.fill();
+            ctx.font = 'bold 12px "Quicksand", sans-serif'; ctx.fillStyle = '#3a3a3a'; ctx.textAlign = 'center'; ctx.fillText('ZPD', 200, 296);
+            ctx.fillStyle = '#3a3a3a'; ctx.fillRect(140, 380, 120, 12);
+            ctx.fillStyle = '#c8a840'; ctx.fillRect(195, 377, 10, 18);
+            ctx.fillStyle = '#c8c0b8'; ctx.beginPath(); ctx.ellipse(125, 330, 18, 50, 0.15, 0, Math.PI * 2); ctx.fill();
+            ctx.beginPath(); ctx.ellipse(275, 330, 18, 50, -0.15, 0, Math.PI * 2); ctx.fill();
+            ctx.fillStyle = '#f8f0e8'; ctx.beginPath(); ctx.ellipse(115, 370, 16, 14, 0, 0, Math.PI * 2); ctx.fill();
+            ctx.beginPath(); ctx.ellipse(285, 370, 16, 14, 0, 0, Math.PI * 2); ctx.fill();
+            ctx.fillStyle = '#3a3a3a'; ctx.fillRect(280, 350, 30, 8);
+            ctx.fillStyle = '#4880b0';
+            if (legState === 0) { ctx.fillRect(155, 415, 30, 70); ctx.fillRect(215, 415, 30, 70); }
+            else if (legState === 1) { ctx.fillRect(145, 420, 30, 65); ctx.fillRect(225, 410, 30, 75); }
+            else { ctx.fillRect(165, 410, 30, 75); ctx.fillRect(205, 420, 30, 65); }
+            resetShadow(ctx); return new THREE.CanvasTexture(canvas);
+        }
+
+        const nickFrames = [createNickFrame(0), createNickFrame(1), createNickFrame(2)];
+        const judyFrames = [createJudyFrame(0), createJudyFrame(1), createJudyFrame(2)];
+
+        const nickSprite = new THREE.Sprite(new THREE.SpriteMaterial({ map: nickFrames[0], depthTest: true }));
+        nickSprite.scale.set(1.6, 2.1, 1); nickSprite.position.set(0.5, 1.4, 2.2); scene.add(nickSprite);
+        const judySprite = new THREE.Sprite(new THREE.SpriteMaterial({ map: judyFrames[0], depthTest: true }));
+        judySprite.scale.set(1.6, 2.1, 1); judySprite.position.set(3.5, 1.35, 2.2); scene.add(judySprite);
+        const nickGroup = nickSprite, judyGroup = judySprite;
+
+        function createBubble(role){ const d=document.createElement('div'); d.className=`bubble ${role}`; const t=document.createElement('div'); t.className='bubble-tail'; d.appendChild(t); const s=document.createElement('span'); d.appendChild(s); return d; }
+        const teacherBubble = new CSS2DObject(createBubble('teacher')); 
+        const studentBubble = new CSS2DObject(createBubble('student'));
+        scene.add(teacherBubble); scene.add(studentBubble);
+
+        const fullScript = [
+            { speaker: 'teacher', text: 'hi，兔子小姐，很高兴遇见你！请问你有什么问题吗？' },
+            { speaker: 'student', text: '狐狸先生，我有些问题，你可以帮我解答吗？' },
+            { speaker: 'teacher', text: '当然可以，请问兔子小姐有什么疑问？' },
+            { speaker: 'student', text: '狐狸先生，为什么反向喷水能够灭火？' },
+            { speaker: 'teacher', text: '当高压水流快速通过狭窄管道时，流速会急剧加快，' },
+            { speaker: 'teacher', text: '流速一快，周围的压强就变小了，窄管就会瞬间吸入大量空气' },
+            { speaker: 'teacher', text: '甚至把泡沫液也一并吸进来，水和泡沫充分混合后先雾化。' },
+            { speaker: 'teacher', text: '雾化之后再向外喷出，雾化的泡沫和水能隔绝氧气，火焰失去氧气助燃便会熄灭。' },
+            { speaker: 'student', text: '那这样的灭火方式又有什么特别的好处呢？' },
+            { speaker: 'teacher', text: '兔子小姐真是爱思考的好学生。' },
+            { speaker: 'teacher', text: '这样的好处有很多，比如它能把燃烧产生的有毒气体带走' },
+            { speaker: 'teacher', text: '还能最大程度保护屋内的物品。' },
+            { speaker: 'teacher', text: '这便是它最巧妙的地方了。' },
+        ];
+        const nickLines = fullScript.filter(l => l.speaker === 'teacher').map(l => l.text);
+        const judyLines = fullScript.filter(l => l.speaker === 'student').map(l => l.text);
+        let nickIndex = 0, judyIndex = 0;
+
+        function formatLimitedText(fullText, maxLen = 40) {
+            if (fullText.length <= maxLen) return fullText;
+            return '…' + fullText.slice(-maxLen + 1);
+        }
+
+        let typingTimer = null, hideTimer = null;
+        function stopTypingAndHideTimer() { if(typingTimer) { clearTimeout(typingTimer); typingTimer = null; } if(hideTimer) { clearTimeout(hideTimer); hideTimer = null; } }
+        
+        function showBubble(who, fullText, duration = 6.0) {
+            const bubble = who === 'teacher' ? teacherBubble : studentBubble;
+            const other = who === 'teacher' ? studentBubble : teacherBubble;
+            other.element.classList.remove('show');
+            const span = bubble.element.querySelector('span');
+            stopTypingAndHideTimer();
+            bubble.element.classList.add('show');
+            
+            let i = 0; span.textContent = '';
+            function type() {
+                if (i < fullText.length) {
+                    i++;
+                    span.textContent = formatLimitedText(fullText.substring(0, i));
+                    typingTimer = setTimeout(type, 80);
+                } else {
+                    if (duration > 0) {
+                        hideTimer = setTimeout(() => { bubble.element.classList.remove('show'); }, duration * 1000);
+                    }
+                }
+            }
+            type();
+        }
+
+        function speakNick() { if (nickLines.length === 0) return; const text = nickLines[nickIndex]; nickIndex = (nickIndex + 1) % nickLines.length; showBubble('teacher', text, 6.0); }
+        function speakJudy() { if (judyLines.length === 0) return; const text = judyLines[judyIndex]; judyIndex = (judyIndex + 1) % judyLines.length; showBubble('student', text, 6.0); }
+
+        function updateBubblePositions() {
+            teacherBubble.position.copy(nickGroup.position.clone().add(new THREE.Vector3(0.2, 2.0, 0.3)));
+            studentBubble.position.copy(judyGroup.position.clone().add(new THREE.Vector3(-0.1, 1.9, 0.3)));
+        }
+
+        const moveSpeed = 4.5; const keys = { w: false, a: false, s: false, d: false, up: false, left: false, down: false, right: false };
+        window.addEventListener('keydown', (e) => {
+            const key = e.code; if (key.startsWith('Key') || key.startsWith('Arrow')) e.preventDefault();
+            if (key === 'KeyQ') { speakNick(); } if (key === 'KeyP') { speakJudy(); }
+            if (key === 'KeyW') keys.w = true; if (key === 'KeyA') keys.a = true; if (key === 'KeyS') keys.s = true; if (key === 'KeyD') keys.d = true;
+            if (key === 'ArrowUp') keys.up = true; if (key === 'ArrowLeft') keys.left = true; if (key === 'ArrowDown') keys.down = true; if (key === 'ArrowRight') keys.right = true;
+        });
+        window.addEventListener('keyup', (e) => {
+            const key = e.code; if (key.startsWith('Key') || key.startsWith('Arrow')) e.preventDefault();
+            if (key === 'KeyW') keys.w = false; if (key === 'KeyA') keys.a = false; if (key === 'KeyS') keys.s = false; if (key === 'KeyD') keys.d = false;
+            if (key === 'ArrowUp') keys.up = false; if (key === 'ArrowLeft') keys.left = false; if (key === 'ArrowDown') keys.down = false; if (key === 'ArrowRight') keys.right = false;
+        });
+
+        let nickAnimFrame = 0, judyAnimFrame = 0, animTime = 0;
+        function handleMovement(delta) {
+            const nickMove = new THREE.Vector3(0,0,0); if (keys.w) nickMove.z -= 1; if (keys.s) nickMove.z += 1; if (keys.a) nickMove.x -= 1; if (keys.d) nickMove.x += 1;
+            if (nickMove.length() > 0) { nickMove.normalize(); nickGroup.position.x += nickMove.x * moveSpeed * delta; nickGroup.position.z += nickMove.z * moveSpeed * delta; nickGroup.position.x = Math.max(-2, Math.min(5, nickGroup.position.x)); nickGroup.position.z = Math.max(1, Math.min(4, nickGroup.position.z)); }
+            const judyMove = new THREE.Vector3(0,0,0); if (keys.up) judyMove.z -= 1; if (keys.down) judyMove.z += 1; if (keys.left) judyMove.x -= 1; if (keys.right) judyMove.x += 1;
+            if (judyMove.length() > 0) { judyMove.normalize(); judyGroup.position.x += judyMove.x * moveSpeed * delta; judyGroup.position.z += judyMove.z * moveSpeed * delta; judyGroup.position.x = Math.max(-2, Math.min(5, judyGroup.position.x)); judyGroup.position.z = Math.max(1, Math.min(4, judyGroup.position.z)); }
+            animTime += delta; if (animTime > 0.12) { animTime = 0; nickSprite.material.map = nickFrames[nickMove.length() > 0 ? ((nickAnimFrame+1)%2+1) : 0]; judySprite.material.map = judyFrames[judyMove.length() > 0 ? ((judyAnimFrame+1)%2+1) : 0]; if (nickMove.length() > 0) nickAnimFrame = (nickAnimFrame+1)%2; if (judyMove.length() > 0) judyAnimFrame = (judyAnimFrame+1)%2; }
+            document.getElementById('coord-debug').innerHTML = `🐾 狐狸先生(${nickGroup.position.x.toFixed(1)}, ${nickGroup.position.z.toFixed(1)}) 兔子小姐(${judyGroup.position.x.toFixed(1)}, ${judyGroup.position.z.toFixed(1)})`;
+        }
+
+        window.addEventListener('resize', () => { camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); composer.setSize(innerWidth, innerHeight); cssRenderer.setSize(innerWidth, innerHeight); });
+
+        let elapsedTime = 0; const clock = new THREE.Clock();
+        function animate() {
+            requestAnimationFrame(animate);
+            const delta = Math.min(clock.getDelta(), 0.1);
+            handleMovement(delta);
+            nickGroup.position.y = 1.4 + Math.sin(elapsedTime * 3) * 0.015;
+            judyGroup.position.y = 1.35 + Math.abs(Math.sin(elapsedTime * 3.5)) * 0.02;
+            elapsedTime += delta;
+            updateBubblePositions();
+            composer.render();
+            cssRenderer.render(scene, camera);
+        }
+        animate();
+
+        let lp = 0;
+        function simLoad() {
+            lp += 2;
+            if (lp <= 30) setLoading(lp, '☁️ 云朵飘动中...');
+            else if (lp <= 60) setLoading(lp, '☀️ 阳光更灿烂了');
+            else if (lp <= 90) setLoading(lp, '🦊🐰 狐狸先生兔子小姐来啦');
+            else setLoading(100, '✨ 按 Q / P 听科普 ✨');
+            if (lp < 100) setTimeout(simLoad, 40);
+        }
+        simLoad();
+    </script>
+</body>
+</html>//AI 辅助生成：DeepSeek-V3-0324，2026 -4-18
